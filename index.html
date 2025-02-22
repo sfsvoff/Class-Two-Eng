@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFS Learning Resource</title>
+    <style>
+        body {
+          background-image: url("bg/bg.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        
+        </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-lg">
+        
+        <h2 class="text-2xl font-bold mb-4 text-center">Class 2 English</h2>
+        <select id="term-select" class="w-full p-2 border rounded-lg mb-4" onchange="updateTerm()">
+            <option value="">Select Term</option>
+            <option value="term1">Term 1</option>
+            <option value="term2">Term 2</option>
+            <option value="term3">Term 3</option>
+        </select>
+        <div id="term1" class="term hidden">
+            <select id="audio-select-term1" class="w-full p-2 border rounded-lg" onchange="playMedia('audio', 'term1')">
+                <option value="">Select Audio</option>
+                
+                <option value="term1/audio/unit1_1.ogg">Partho the Park Keeper-Text-Audio</option>
+                <option value="term1/audio/unit1_2.ogg">Partho the Park Keeper-Speech Practice</option>
+                <option value="term1/audio/unit2_1.ogg">The Old Rabbit -Text-Audio</option>
+                <option value="term1/audio/unit2_2.ogg">The Old Rabbit -Listening</option>
+                
+                <option value="term1/audio/poem1.ogg">There are Big Waves</option>
+                <option value="term1/audio/unit3_1.ogg">Randolph The Reindeer -Text-Audio</option>
+                <option value="term1/audio/unit3_2.ogg">Randolph The Reindeer -Listening</option>
+                <option value="term1/audio/unit3_3.ogg">Randolph The Reindeer -Speech Practice</option>
+                <option value="term1/audio/poem2.ogg">Our Classroom</option>
+                <option value="term1/audio/unit4_1.ogg">The Apple Tree -Text-Audio</option>
+                <option value="term1/audio/unit4_2.ogg">The Apple Tree -Listening</option>
+                
+                
+            </select>
+            <select id="video-select-term1" class="w-full p-2 border rounded-lg" onchange="playMedia('video', 'term1')">
+                <option value="">Select Video</option>
+                <option value="term1/video/unit1_1.webm">Partho the Park Keeper</option>
+                <option value="term1/video/unit1_2.webm">Common Nouns: Singular and Plural</option>
+                
+                
+                <option value="term1/video/unit2.webm">Possessives with 's</option>
+                <option value="term1/video/poem1.webm">There are Big Waves</option>
+                <option value="term1/video/unit3.webm">Predicative Adjectives</option>
+                <option value="term1/video/poem2.webm">Our Classroom</option>
+                <option value="term1/video/unit4_1.webm">The Apple Tree</option>
+                <option value="term1/video/unit4_2.webm">Prepositions of Place</option>
+                
+                
+            </select>
+            <select id="pdf-select-term1" class="w-full p-2 border rounded-lg" onchange="openPdf('term1')">
+                <option value="">Select PDF</option>
+                <option value="term1/pdf/u1_ws.pdf">Worksheet 1</option>
+                <option value="term1/pdf/u2_ws.pdf">Worksheet 2</option>
+                <option value="term1/pdf/u3_ws.pdf">Worksheet 3</option>
+                <option value="term1/pdf/u4_ws.pdf">Worksheet 4</option>
+                
+            </select>
+
+            
+        </div>
+        <div id="term2" class="term hidden">
+            <select id="audio-select-term2" class="w-full p-2 border rounded-lg" onchange="playMedia('audio', 'term2')">
+                <option value="">Select Audio</option>
+                <option value="term2/audio/unit1_1.ogg">The Giant Mouse -Text Audio</option>
+                <option value="term2/audio/unit1_2.ogg">The Giant Mouse - Speech Practice</option>
+                <option value="term2/audio/poem1.ogg">The Raindrops</option>
+                <option value="term2/audio/unit2_1.ogg">Please Leave a Message -Text Audio</option>
+                <option value="term2/audio/unit2_2.ogg">Please Leave a Message -Fuctions</option>
+                <option value="term2/audio/unit2_3.ogg">Please Leave a Message -Listening</option>
+                <option value="term2/audio/unit3_1.ogg">The Song of the Train -Text Audio</option>
+                <option value="term2/audio/unit3_2.ogg">The Song of the Train -Speech Practice</option>
+                
+                <option value="term2/audio/poem2.ogg">White Windows</option>
+                <option value="term2/audio/unit4_1.ogg">The Friendly Dragon -Text Audio</option>
+                <option value="term2/audio/unit4_2.ogg">The Friendly Dragon -Speech Practice</option>
+                <option value="term2/audio/unit4_3.ogg">The Friendly Dragon -Listening</option>
+                
+            </select>
+            <select id="video-select-term2" class="w-full p-2 border rounded-lg" onchange="playMedia('video', 'term2')">
+                <option value="">Select Video</option>
+                <option value="term2/video/unit1_1.webm">The Giant Mouse</option>
+                <option value="term2/video/unit1_2.webm">Prepositions of Time</option>
+                <option value="term2/video/poem1.webm">The Raindrops</option>
+                <option value="term2/video/unit2.webm">Articles</option>
+                <option value="term2/video/unit3_1.webm">The Song of the Train</option>
+                <option value="term2/video/unit3_2.webm">Connectors- And, But</option>
+                <option value="term2/video/poem2.webm">White Windows</option>
+                <option value="term2/video/unit4.webm">The Friendly Dragon</option>
+                
+            </select>
+            <select id="pdf-select-term2" class="w-full p-2 border rounded-lg" onchange="openPdf('term2')">
+                <option value="">Select PDF</option>
+                <option value="term2/pdf/u1_ws.pdf">Worksheet 1</option>
+                <option value="term2/pdf/u2_ws.pdf">Worksheet 2</option>
+                <option value="term2/pdf/u3_ws.pdf">Worksheet 3</option>
+                <option value="term2/pdf/u4_ws.pdf">Worksheet 4</option>
+                
+            </select>
+        </div>
+        <div id="term3" class="term hidden">
+            <select id="audio-select-term3" class="w-full p-2 border rounded-lg" onchange="playMedia('audio', 'term3')">
+                <option value="">Select Audio</option>
+                <option value="term3/audio/unit1_1.ogg">Other People's Houses -Text Audio</option>
+                <option value="term3/audio/unit1_2.ogg">Other People's Houses -Listening</option>
+                
+                <option value="term3/audio/poem1_1.ogg">Skyscsrapers -Text Audio</option>
+                <option value="term3/audio/poem1_2.ogg">Skyscrapers -Going Further</option>
+                <option value="term3/audio/unit2.ogg">The Golden Windows -Text Audio</option>
+                <option value="term3/audio/unit3_1.ogg">The Lost GUll -Text Audio</option>
+                <option value="term3/audio/unit3_2.ogg">The Lost Gull -Speech Practice</option>
+                <option value="term3/audio/poem2_1.ogg">The Sun -Text Audio</option>
+                <option value="term3/audio/poem2_2.ogg">The Sun -Going Further</option>
+                
+                <option value="term3/audio/unit4.ogg">The Cart Driver -Text Audio</option>
+                <option value="term3/audio/poem3.ogg">Have you Seen the Cuckoo Bird? -Text Audio</option>
+                
+
+            </select>
+            <select id="video-select-term3" class="w-full p-2 border rounded-lg" onchange="playMedia('video', 'term3')">
+                <option value="">Select Video</option>
+                <option value="term3/video/unit1.webm">Simple Present Tense for Habitual Action</option>
+                <option value="term3/video/poem1.webm">Skyscrapers</option>
+                <option value="term3/video/unit2.webm">The Simple Past Tense</option>
+                
+                <option value="term3/video/unit3_1.webm">The Lost Gull</option>
+                <option value="term3/video/unit3_2.webm">"it"-Introduction</option>
+                <option value="term3/video/poem2.webm">The Sun</option>
+                
+                <option value="term3/video/unit4.webm">There is , There are</option>
+                <option value="term3/video/poem3.webm">Have you Seen the Cuckoo Bird?</option>
+                
+            </select>
+            <select id="pdf-select-term3" class="w-full p-2 border rounded-lg" onchange="openPdf('term3')">
+                <option value="">Select PDF</option>
+                <option value="term3/pdf/u1_ws.pdf">Worksheet 1</option>
+                <option value="term3/pdf/u2_ws.pdf">Worksheet 2</option>
+                <option value="term3/pdf/u3_ws.pdf">Worksheet 3</option>
+                <option value="term3/pdf/u4_ws.pdf">Worksheet 4</option>
+                
+            </select>
+        </div>
+        <div id="media-container" class="mt-4 hidden">
+            <audio id="audio" controls class="hidden w-full mt-2">
+                <source src="audio.ogg" type="audio/ogg">
+                <source src="audio.mp3" type="audio/mp3">
+            </audio>
+            <video id="video" controls class="hidden w-full mt-2">
+                <source src="video.webm" type="video/webm">
+                <source src="video.mp4" type="video/mp4"> <!-- Fallback for unsupported browsers -->
+                Your browser does not support the video tag.
+            </video>
+            <iframe id="pdf" class="hidden w-full h-64 mt-2"></iframe>
+        </div>
+        <footer class="bg-stone-600 text-white text-center p-4 mt-6 w-full">
+            <br>Concept by Rev FR Joby Varghese T.O.R<br>Powered by Daniel <br> &copy; 2025 SFS Learning Resource. All rights reserved.
+        </footer>
+        
+    </div>
+    
+        
+     
+    <script>
+        function updateTerm() {
+            document.querySelectorAll('.term').forEach(el => el.classList.add('hidden'));
+            let selectedTerm = document.getElementById('term-select').value;
+            if (selectedTerm) {
+                document.getElementById(selectedTerm).classList.remove('hidden');
+            }
+        }
+
+        function playMedia(type, term) {
+            document.getElementById('media-container').classList.remove('hidden');
+            document.getElementById('audio').classList.add('hidden');
+            document.getElementById('video').classList.add('hidden');
+            document.getElementById('pdf').classList.add('hidden');
+
+            let selectedFile = document.getElementById(type + '-select-' + term).value;
+            if (selectedFile) {
+                let mediaElement = document.getElementById(type);
+                mediaElement.src = selectedFile;
+                mediaElement.classList.remove('hidden');
+            }
+        }
+        function openPdf(term) {
+            let selectedFile = document.getElementById('pdf-select-' + term).value;
+            if (selectedFile) {
+                window.open(selectedFile, '_blank');
+            }
+        }
+    </script>
+    
+</body>
+</html>
